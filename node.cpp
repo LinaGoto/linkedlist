@@ -1,6 +1,6 @@
 #include "node.h"
 
-Node::Node(){
+Node::Node(Student*){
   value = 0;
   next = NULL;
 }
@@ -10,18 +10,14 @@ Node::~Node(){
   next = NULL;
 }
 
-void Node::setValue(int newvalue){
-  value = newvalue;
-}
-
-int Node::getValue(){
-  return value;
-}
-
-void Node::setNext(Node* newnext){
-  next = newnext;
-}
-
-Node*Node::getNext(){
+Node*Node::gextNext(){
   return next;
+}
+
+Student* getStudent(){
+  return student;
+}
+
+viod Node::setNext(Node* newnext){
+  next = newnext;
 }

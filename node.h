@@ -6,14 +6,23 @@ using namespace std;
 
 class Node{
  public:
-  Node();
+
+  //constructor destructor
+  Node(Student*);
   ~Node();
-  void setValue(int newvalue);
-  int getValue();
-  void setNext(Node* newnext);
-  Node* getNext();
+  
+  //get next Node pointer
+  Node* gextNext();
+
+  //get student pointer
+  Student* getStudent();
+
+  //set the next pointer to the corresponding node pointer
+  viod setNext(Node* );
+  
  private:
   int value;
   Node*next;
+  Student *student;
 };
 #endif
