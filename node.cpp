@@ -10,14 +10,14 @@ Node::~Node(){
   next = NULL;
 }
 
-Node*Node::gextNext(){
+Node* Node::gextNext(){
   return next;
 }
 
-Student* getStudent(){
+Student* Student::getStudent(){
   return student;
 }
 
-viod Node::setNext(Node* newnext){
+void Node::setNext(Node* newnext){
   next = newnext;
 }

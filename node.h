@@ -1,5 +1,6 @@
 #ifndef NODE_H
 #define NODE_H
+#include "student.h"
 #include <iostream>
 
 using namespace std;
@@ -18,7 +19,7 @@ class Node{
   Student* getStudent();
 
   //set the next pointer to the corresponding node pointer
-  viod setNext(Node* );
+  void setNext(Node* newnext);
   
  private:
   int value;
