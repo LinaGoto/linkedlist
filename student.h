@@ -8,10 +8,10 @@ class Student{
  public:
 
   //get next Student pointer
-  Student* gextNext();
+  class Student* getNext(void);
 
  private:
   int value;
-  Student*next;
+  class Student*next;
 };
 #endif
