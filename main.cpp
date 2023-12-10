@@ -8,11 +8,34 @@ Lina Goto
 Linked list
  */
 
+void add(int newvalue);
+void print(Node* next);
+
 using namespace std;
 
 Node* head = NULL;
 
 int main(){
-
+  Node* current = head;
+  if (current == NULL){
+    head = new Node();
+    head -> setValue(newvalue);
+  }
+  else {
+    while (current -> getNext() != NULL){
+      current = current -> getNext();
+    }
+    current -> setNext(new Node());
+    current -> getNext() -> setValue(newvalue);
+  }
 }
+
+void print (Node* next){
+  if (next == head){
+    cout << "list: ";
+  }
+  if(next != NULL){
+    cout << next -> getVakue() << " ";
+    print (next -> getNext());
+  }
 
