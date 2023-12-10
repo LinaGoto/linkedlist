@@ -15,7 +15,7 @@ using namespace std;
 
 Node* head = NULL;
 
-int main(){
+void add(int newvalue){
   Node* current = head;
   if (current == NULL){
     head = new Node();
@@ -37,5 +37,10 @@ void print (Node* next){
   if(next != NULL){
     cout << next -> getVakue() << " ";
     print (next -> getNext());
-  }
+}
+
+int main(){
+  add(5);
+  print(head);
+}
 
