@@ -1,5 +1,9 @@
 #include "student.h"
 
-Student *Student::getNext(){
-  return next;
+int Student::getValue() {
+  return value;
+}
+
+void Student::setValue(int newvalue) {
+  value = newvalue;
 }

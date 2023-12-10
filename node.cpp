@@ -1,25 +1,31 @@
 #include "node.h"
 #include "student.h"
+#include <iostream>
 
-Node::Node(Student*sstudent){
-  value = 0;
+Node::Node(){
   next = NULL;
-  student = sstudent;
 }
 
 Node::~Node(){
-  delete &value;
   next = NULL;
 }
 
-Student* Node::getStudent() {
-  return student;
+Student *Node::getStudent() {
+  return &student;
 }
 
-Node* Node::gextNext(){
+Node* Node::getNext(){
   return next;
 }
 
 void Node::setNext(Node* newnext){
   next = newnext;
+}
+
+void Node::setValue(int newvalue) {
+  student.setValue(newvalue);
+}
+
+int Node::getValue() {
+  return student.getValue();
 }

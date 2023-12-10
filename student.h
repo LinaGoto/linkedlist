@@ -1,17 +1,12 @@
 #ifndef STUDENT_H
 #define STUDENT_H
-#include <iostream>
 
-using namespace std;
-
-class Student{
- public:
-
-  //get next Student pointer
-  class Student* getNext(void);
-
+class Student {
  private:
   int value;
-  class Student*next;
+
+ public:
+  int getValue();
+  void setValue(int);
 };
 #endif
