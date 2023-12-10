@@ -35,7 +35,7 @@ void print (Node* next){
     cout << "list: ";
   }
   if(next != NULL){
-    cout << next -> getVakue() << " ";
+    cout << next -> getValue() << " ";
     print (next -> getNext());
 }
 
