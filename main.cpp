@@ -6,7 +6,7 @@ using namespace std;
 
 /*
 Lina Goto
-11/4/23
+12/4/23
 Linked list
  */
 
@@ -15,13 +15,15 @@ void print(Node* next);
 
 static Node *head = NULL;
 
+//add number in node
 void add(int newvalue){
   Node *current = head;
   Node *newnode;
+  //very first node; add new node and set value
   if (current == NULL) {
     head = new Node();
     head -> setValue(newvalue);
-  } else {
+  } else {//find node which next is NULL - set new node by pointer and set value
     while (current -> getNext() != NULL){
       current = current -> getNext();
     }
@@ -31,12 +33,16 @@ void add(int newvalue){
   }
 }
 
+//printing the node
 void print (Node *next) {
+  //if the node is very first print list:
   if (next == head){
     cout << "list: ";
   }
+  //if the node is not null (until the last node) print the values
   if (next != NULL) {
     cout << next -> getValue() << " ";
+    //recursive call
     print (next -> getNext());
     if (next -> getNext() == NULL) {
       cout << endl;
